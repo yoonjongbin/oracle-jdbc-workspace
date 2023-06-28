@@ -40,7 +40,7 @@
 
 /*
     INSTR
-    - INSTR(STRING, STR [, POSITION, OCCURRENCE])
+    - INSTR(STRING, STR, [POSITION, OCCURRENCE])
     - 지정한 위치부터 지정된 숫자 번째로 나타나는 문자의 시작 위치를 반환
 
     설명
