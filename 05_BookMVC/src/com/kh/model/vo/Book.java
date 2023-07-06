@@ -22,6 +22,10 @@ public class Book {
 		this.bkTitle = bkTitle;
 		this.bkAuthor = bkAuthor;
 	}
+	public Book(int no) {
+		this.bkNo = no;
+	}
+
 	public int getBkNo() {
 		return bkNo;
 	}

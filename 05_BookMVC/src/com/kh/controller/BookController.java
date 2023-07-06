@@ -11,7 +11,7 @@ import com.kh.model.vo.Rent;
 public class BookController {
 	private BookDAO dao = new BookDAO();
 	private Member member = new Member();
-	
+	private Rent rent = new Rent();
 	
 	public ArrayList<Book> printBookAll() throws SQLException{
 		//select
@@ -64,6 +64,8 @@ public class BookController {
 	
 	
 	public boolean rentBook(int no) {
+		rent =new Rent(member, no);
+		
 		return false;
 	}
 	

@@ -4,18 +4,25 @@ import java.util.Date;
 
 public class Rent {
 	private int rentNo;
-	private Member rentMem;
-	private Book rentBookNo;
+	private Member rentMemNo;
+	private Book rentBook;
 	private Date rentDate;
 	public Rent() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Rent(int rentNo, Member rentMemNo, Book rentBookNo, Date rentDate) {
+	
+	public Rent(Member member, Book book) {
+		super();
+		this.rentMemNo = member;
+		this.rentBook = book;
+	}
+	
+	public Rent(int rentNo, Member rentMem, Book rentBookNo, Date rentDate) {
 		super();
 		this.rentNo = rentNo;
-		this.rentMem = rentMemNo;
-		this.rentBookNo = rentBookNo;
+		this.rentMemNo = rentMem;
+		this.rentBook = rentBookNo;
 		this.rentDate = rentDate;
 	}
 	public int getRentNo() {
@@ -25,16 +32,16 @@ public class Rent {
 		this.rentNo = rentNo;
 	}
 	public Member getRentMemNo() {
-		return rentMem;
+		return rentMemNo;
 	}
-	public void setRentMemNo(Member rentMemNo) {
-		this.rentMem = rentMemNo;
+	public void setRentMem(Member rentMem) {
+		this.rentMemNo = rentMem;
 	}
 	public Book getRentBookNo() {
-		return rentBookNo;
+		return rentBook;
 	}
 	public void setRentBookNo(Book rentBookNo) {
-		this.rentBookNo = rentBookNo;
+		this.rentBook = rentBookNo;
 	}
 	public Date getRentDate() {
 		return rentDate;

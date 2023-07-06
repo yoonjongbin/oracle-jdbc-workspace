@@ -28,6 +28,10 @@ public class Member {
 		this.status = status;
 		this.enrollDate = enrollDate;
 	}
+	public Member(int memNo) {
+		this.memNo = memNo;
+	}
+
 	public int getMemNo() {
 		return memNo;
 	}
