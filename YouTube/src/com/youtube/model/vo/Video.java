@@ -10,16 +10,14 @@ public class Video {
 	private int videoViews;
 	private String videoUrl;
 	private String videoPhoto;
-	private int categoryCode; 
-	private int channelCode;
-	private String memberId;
-	public Video() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	
+	private Category category;
+	private Channel channel;
+	private Member member;
+	
+	public Video() {}
 	public Video(int videoCode, String videoTitle, String videoDesc, Date videoDate, int videoViews, String videoUrl,
-			String videoPhoto, int categoryCode, int channelCode, String memberId) {
-		super();
+			String videoPhoto, Category category, Channel channel, Member member) {
 		this.videoCode = videoCode;
 		this.videoTitle = videoTitle;
 		this.videoDesc = videoDesc;
@@ -27,10 +25,11 @@ public class Video {
 		this.videoViews = videoViews;
 		this.videoUrl = videoUrl;
 		this.videoPhoto = videoPhoto;
-		this.categoryCode = categoryCode;
-		this.channelCode = channelCode;
-		this.memberId = memberId;
+		this.category = category;
+		this.channel = channel;
+		this.member = member;
 	}
+	
 	public int getVideoCode() {
 		return videoCode;
 	}
@@ -73,31 +72,29 @@ public class Video {
 	public void setVideoPhoto(String videoPhoto) {
 		this.videoPhoto = videoPhoto;
 	}
-	public int getCategoryCode() {
-		return categoryCode;
+	public Category getCategory() {
+		return category;
 	}
-	public void setCategoryCode(int categoryCode) {
-		this.categoryCode = categoryCode;
+	public void setCategory(Category category) {
+		this.category = category;
 	}
-	public int getChannelCode() {
-		return channelCode;
+	public Channel getChannel() {
+		return channel;
 	}
-	public void setChannelCode(int channelCode) {
-		this.channelCode = channelCode;
+	public void setChannel(Channel channel) {
+		this.channel = channel;
 	}
-	public String getMemberId() {
-		return memberId;
+	public Member getMember() {
+		return member;
 	}
-	public void setMemberId(String memberId) {
-		this.memberId = memberId;
+	public void setMember(Member member) {
+		this.member = member;
 	}
+	
 	@Override
 	public String toString() {
 		return "Video [videoCode=" + videoCode + ", videoTitle=" + videoTitle + ", videoDesc=" + videoDesc
 				+ ", videoDate=" + videoDate + ", videoViews=" + videoViews + ", videoUrl=" + videoUrl + ", videoPhoto="
-				+ videoPhoto + ", categoryCode=" + categoryCode + ", channelCode=" + channelCode + ", memberId="
-				+ memberId + "]";
+				+ videoPhoto + ", category=" + category + ", channel=" + channel + ", member=" + member + "]";
 	}
-	
-	
 }
