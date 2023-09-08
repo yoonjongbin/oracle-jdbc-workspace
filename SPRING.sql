@@ -145,3 +145,7 @@ create table userinfo (
 insert into userinfo values('member','member');
 insert into userinfo values('admin','admin');
 commit;
+
+SELECT num, model, price, vcode, vcode, vendor
+FROM Phone 
+JOIN company USING(vcode);
