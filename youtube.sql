@@ -150,4 +150,14 @@ INSERT INTO MEMBER(ID, PASSWORD, NAME) VALUES('user1', '1234', 'user1');
 COMMIT;
 SELECT * FROM MEMBER;
 
+
+INSERT INTO CHANNEL(CHANNEL_CODE, CHANNEL_NAME, CHANNEL_DESC, CHANNEL_PHOTO, ID)
+VALUES(SEQ_CHANNEL.NEXTVAL, 'DD', 'EXAMPLE', '1', 'user1');
 SELECT * FROM CHANNEL;
+
+
+-- 기존 데이터 삭제
+truncate table video cascade;
+truncate table channel cascade;
+
+Select * from channel;
